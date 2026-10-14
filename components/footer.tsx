@@ -11,7 +11,7 @@ export default function Footer() {
           <p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">Software engineer building useful systems at the intersection of product, automation, and AI.</p>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="mailto:arnob1415@gmail.com" className="rounded-full border border-white/10 p-3 text-muted-foreground transition hover:border-primary/60 hover:text-primary" aria-label="Email"><Mail className="h-4 w-4" /></Link>
+          <Link href="mailto:ararnob1415@gmail.com" className="rounded-full border border-white/10 p-3 text-muted-foreground transition hover:border-primary/60 hover:text-primary" aria-label="Email"><Mail className="h-4 w-4" /></Link>
           {site.github && <Link href={site.github} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-3 text-muted-foreground transition hover:border-primary/60 hover:text-primary" aria-label="GitHub"><Github className="h-4 w-4" /></Link>}
           {site.linkedin && <Link href={site.linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-3 text-muted-foreground transition hover:border-primary/60 hover:text-primary" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></Link>}
           <Link href="#top" className="ml-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">Back to top <ArrowUpRight className="h-4 w-4" /></Link>
