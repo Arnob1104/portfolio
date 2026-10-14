@@ -1,0 +1,7 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
+const groups = [{ title: 'Languages', items: ['C++', 'Python', 'JavaScript', 'TypeScript', 'SQL'] }, { title: 'Product engineering', items: ['Next.js', 'React.js', 'HTML', 'CSS', 'Tailwind CSS', 'FastAPI'] }, { title: 'AI & data', items: ['LangChain', 'LangGraph', 'RAG', 'pgvector', 'MCP Server', 'TensorFlow', 'Scikit-learn'] }, { title: 'Tools & platforms', items: ['PostgreSQL', 'Supabase', 'Git', 'GitHub Actions', 'VS Code', 'Google Sheets API', 'n8n'] }];
+
+export default function Skills() { return <section id="skills" className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32"><div className="mb-14"><p className="eyebrow mb-5">My toolkit</p><h2 className="section-heading">The stack behind the work.</h2></div><div className="grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2">{groups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="bg-card p-7 md:p-9"><p className="text-sm font-semibold text-primary">0{index + 1}</p><h3 className="mt-8 font-display text-xl font-semibold">{group.title}</h3><div className="mt-5 flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="rounded-full bg-secondary px-3 py-2 text-sm text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground">{item}</span>)}</div></motion.div>)}</div></section>; }

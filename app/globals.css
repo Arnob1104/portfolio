@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 28% 8%;
+  --foreground: 40 20% 95%;
+  --card: 224 24% 12%;
+  --card-foreground: 40 20% 95%;
+  --popover: 224 24% 12%;
+  --popover-foreground: 40 20% 95%;
+  --primary: 38 93% 63%;
+  --primary-foreground: 222 28% 8%;
+  --secondary: 223 20% 17%;
+  --secondary-foreground: 40 20% 95%;
+  --muted: 222 18% 15%;
+  --muted-foreground: 218 12% 67%;
+  --accent: 189 72% 55%;
+  --accent-foreground: 222 28% 8%;
+  --destructive: 0 72% 54%;
+  --destructive-foreground: 40 20% 95%;
+  --border: 219 18% 23%;
+  --input: 219 18% 23%;
+  --ring: 38 93% 63%;
+  --chart-1: 38 93% 63%;
+  --chart-2: 189 72% 55%;
+  --chart-3: 145 58% 52%;
+  --chart-4: 12 82% 64%;
+  --chart-5: 262 68% 70%;
+  --radius: 1rem;
+}
+
+* { @apply border-border; }
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-background text-foreground;
+  background-image: radial-gradient(circle at 80% 0%, rgba(59, 91, 126, .16), transparent 28rem), radial-gradient(circle at 0% 30%, rgba(215, 157, 69, .08), transparent 24rem);
+}
+::selection { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+
+@layer components {
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.24em] text-primary; }
+  .section-heading { @apply text-3xl font-semibold tracking-[-0.04em] text-foreground md:text-5xl; }
+  .glass { @apply border border-white/10 bg-white/[0.035] backdrop-blur-xl; }
+  .grid-lines { background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 48px 48px; }
+}
